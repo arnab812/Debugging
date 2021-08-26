@@ -1,0 +1,12 @@
+button {
+    background-color: aqua;
+    color: #000000;
+}
+#search {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#print {
+    margin-top: 10px;
+    margin-left: 18px;
+}

@@ -1,0 +1,38 @@
+{
+    "name": "Chrome Extension using Manifest Version : 3",
+    "description": "Developer : Tier5_intern_Arnab",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage","notifications","tabs","activeTab","alarms","scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "/images/one.png",
+        "32": "/images/two.png",
+        "48": "/images/three.png",
+        "128": "/images/four.png"
+      }
+    },
+    "icons": {
+      "16": "/images/one.png",
+      "32": "/images/two.png",
+      "48": "/images/three.png",
+      "128": "/images/four.png"
+    },
+  
+    "content_scripts": [ 
+      {
+      "matches": ["<all_urls>"],
+      "js": ["Content.js","inject.js"],
+      "css": ["inject.css"]
+      }
+    ],
+    
+    "web_accessible_resources": [{
+      "resources": ["/images/*"],
+      "matches": ["http://*/*", "https://*/*"]
+    }]
+  }
